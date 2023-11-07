@@ -20,13 +20,13 @@ public class Hooks {
     @After
     public void after(Scenario senaryo){
 
-        ExcelUtility.writeToExcel("src/test/java/ApachePOI/resource/ApacheExcel2.xlsx",senaryo);
-
-        if (senaryo.isFailed()){
-            TakesScreenshot ts=((TakesScreenshot) GWD.getDriver());
-            byte[] hafizadakiHali=ts.getScreenshotAs(OutputType.BYTES);
-            senaryo.attach(hafizadakiHali, "image/png", "screenshot name");
-        }
+//        ExcelUtility.writeToExcel("src/test/java/ApachePOI/resource/ApacheExcel2.xlsx",senaryo);
+//
+//        if (senaryo.isFailed()){
+//            TakesScreenshot ts=((TakesScreenshot) GWD.getDriver());
+//            byte[] hafizadakiHali=ts.getScreenshotAs(OutputType.BYTES);
+//            senaryo.attach(hafizadakiHali, "image/png", "screenshot name");
+//        }
 
 
 
