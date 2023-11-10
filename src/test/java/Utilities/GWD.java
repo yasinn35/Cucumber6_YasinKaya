@@ -44,18 +44,24 @@ public class GWD {
                     threadDriver.set(new EdgeDriver());
                     break;
                 default:
-                    if (isRunningOnJenkins()) {
-                        FirefoxOptions options = new FirefoxOptions();
-                        options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400");
-                        threadDriver.set(new FirefoxDriver(options));
-
-//                        EdgeOptions eOptions = new EdgeOptions();
-//                        eOptions.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400");
-//                        threadDriver.set(new EdgeDriver(eOptions));
-
-                    } else {
-                        threadDriver.set(new ChromeDriver());
-                    }
+//                    if (isRunningOnJenkins()) {
+//                        FirefoxOptions options = new FirefoxOptions();
+//                        options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400");
+//                        threadDriver.set(new FirefoxDriver(options));
+//
+////                        EdgeOptions eOptions = new EdgeOptions();
+////                        eOptions.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400");
+////                        threadDriver.set(new EdgeDriver(eOptions));
+//
+////                        //Jenkins için Chrome memory maximize
+////                        ChromeOptions options = new ChromeOptions();
+////                        options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400");
+////                        threadDriver.set(new ChromeDriver(options)); // ilgili threade bir driver set ettim
+//
+//                    } else {
+//                        threadDriver.set(new ChromeDriver());
+//                    }
+                    threadDriver.set(new FirefoxDriver());
 
             }
 
