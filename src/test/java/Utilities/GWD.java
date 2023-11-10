@@ -61,7 +61,8 @@ public class GWD {
 //                    } else {
 //                        threadDriver.set(new ChromeDriver());
 //                    }
-                    threadDriver.set(new FirefoxDriver());
+                    threadDriver.set(new EdgeDriver());
+
 
             }
 
